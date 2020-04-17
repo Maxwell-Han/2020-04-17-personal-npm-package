@@ -1,11 +1,14 @@
 import React from "react";
-class MyComponent extends React.Component {
-  render() {
-    return (
-      <div>
-        <div>Hello World</div>
-      </div>
-    );
-  }
+function withLogging(WrappedComponent) {
+  console.log('React Logger: ', WrappedComponent.displayName)
+  return class extends React.Component {
+    componentDidUpdate(prevProps) {
+      console.log("Current props: ", this.props);
+      console.log("Previous props: ", prevProps);
+    }
+    render() {
+      return <WrappedComponent {...this.props} />;
+    }
+  };
 }
-export default MyComponent;
+export default withLogging;
