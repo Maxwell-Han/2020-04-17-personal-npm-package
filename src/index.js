@@ -7,6 +7,7 @@ function withLogging(WrappedComponent) {
       console.log("Previous props: ", prevProps);
     }
     render() {
+      console.log(WrappedComponent.displayName,' props are ', this.props)
       return <WrappedComponent {...this.props} />;
     }
   };

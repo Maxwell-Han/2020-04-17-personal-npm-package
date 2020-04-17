@@ -118,6 +118,7 @@ function withLogging(WrappedComponent) {
     }, {
       key: "render",
       value: function render() {
+        console.log(WrappedComponent.displayName, ' props are ', this.props);
         return _react2.default.createElement(WrappedComponent, this.props);
       }
     }]);

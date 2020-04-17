@@ -1,7 +1,7 @@
 {
   "name": "@mwellh84/hackathon",
-  "version": "1.0.0",
-  "description": "Put a description here",
+  "version": "2.0.0",
+  "description": "A logger for React components",
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^15.5.4"
